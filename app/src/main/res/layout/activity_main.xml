@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/inner_frame_layout_padding2"
+        app:layout_boxedEdges="all"
+        android:orientation="vertical">
+
+        <TextView
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:padding="@dimen/inner_frame_layout_padding"
+
+            />
+
+        <Button
+            app:layout_constraintEnd_toEndOf="@id/location"
+            app:layout_constraintStart_toStartOf="@id/location"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            android:id="@+id/refreshBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/inner_frame_layout_padding"
+            android:text="@string/getPrice"/>
+
+        <TextView
+            app:layout_constraintEnd_toEndOf="@id/refreshBtn"
+            app:layout_constraintStart_toStartOf="@id/refreshBtn"
+            app:layout_constraintTop_toBottomOf="@id/refreshBtn"
+            android:padding="@dimen/inner_frame_layout_padding"
+
+            android:id="@+id/resultSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints=""
+            android:ems="10"
+            android:gravity="center_horizontal|top"
+            android:hint="@string/empty"
+            android:minHeight="48dp"
+
+            android:text="" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
